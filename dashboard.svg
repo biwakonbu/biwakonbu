@@ -1,0 +1,56 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Nord theme background -->
+  <defs>
+    <linearGradient id="nordGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E3440;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B4252;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with gradient -->
+  <rect width="800" height="600" fill="url(#nordGradient)" rx="15"/>
+  <rect width="796" height="596" x="2" y="2" fill="none" stroke="#4C566A" stroke-width="2" rx="13"/>
+  
+  <!-- Title section -->
+  <foreignObject x="50" y="30" width="700" height="80">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+      <h1 style="color: #88C0D0; margin: 0; font-size: 28px; font-weight: bold;">🧊 Biwakonbu's Nord Dashboard</h1>
+      <p style="color: #D8DEE9; margin: 10px 0 0 0; font-size: 16px; font-style: italic;">Full-stack Developer / Cloud Native / OSS Enthusiast</p>
+    </div>
+  </foreignObject>
+  
+  <!-- Stats section -->
+  <foreignObject x="20" y="120" width="760" height="180">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+      <img src="https://github-readme-stats.vercel.app/api?username=biwakonbu&show_icons=true&hide=issues&theme=nord&bg_color=2E3440&title_color=88C0D0&text_color=ECEFF4&icon_color=81A1C1&border_color=5E81AC&border_radius=10" alt="GitHub Stats" height="160" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=biwakonbu&layout=compact&langs_count=8&theme=nord&bg_color=2E3440&title_color=88C0D0&text_color=ECEFF4&border_color=5E81AC&border_radius=10" alt="Top Languages" height="160" />
+    </div>
+  </foreignObject>
+  
+  <!-- Tech Stack section -->
+  <text x="400" y="340" text-anchor="middle" fill="#88C0D0" font-size="20" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">🛠️ Tech Stack</text>
+  
+  <foreignObject x="50" y="350" width="700" height="60">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
+      <img src="https://img.shields.io/badge/Go-1.22-%232E3440?style=for-the-badge&logo=go&logoColor=%2388C0D0&labelColor=%233B4252" style="margin: 4px;" />
+      <img src="https://img.shields.io/badge/Rust-1.78-%232E3440?style=for-the-badge&logo=rust&logoColor=%2381A1C1&labelColor=%233B4252" style="margin: 4px;" />
+      <img src="https://img.shields.io/badge/Kubernetes-%232E3440?style=for-the-badge&logo=kubernetes&logoColor=%235E81AC&labelColor=%233B4252" style="margin: 4px;" />
+      <img src="https://img.shields.io/badge/TypeScript-%232E3440?style=for-the-badge&logo=typescript&logoColor=%2388C0D0&labelColor=%233B4252" style="margin: 4px;" />
+    </div>
+  </foreignObject>
+  
+  <!-- Featured Project section -->
+  <text x="400" y="450" text-anchor="middle" fill="#88C0D0" font-size="20" font-weight="bold" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">📦 Featured Project</text>
+  
+  <foreignObject x="200" y="460" width="400" height="120">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="text-align: center;">
+      <a href="https://github.com/biwakonbu/reviewtask">
+        <img src="https://github-readme-stats.vercel.app/api/pin/?username=biwakonbu&repo=reviewtask&theme=nord&bg_color=2E3440&title_color=88C0D0&text_color=ECEFF4&icon_color=81A1C1&border_color=5E81AC" alt="reviewtask" />
+      </a>
+      <div style="margin-top: 10px;">
+        <img src="https://img.shields.io/github/stars/biwakonbu/reviewtask?color=%2388C0D0&label=%E2%AD%90%20Stars&labelColor=%234C566A&style=for-the-badge" style="margin: 2px;" />
+        <img src="https://img.shields.io/github/languages/top/biwakonbu/reviewtask?color=%2381A1C1&label=Top%20Lang&labelColor=%234C566A&style=for-the-badge" style="margin: 2px;" />
+      </div>
+    </div>
+  </foreignObject>
+</svg>

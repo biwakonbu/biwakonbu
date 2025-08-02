@@ -54,7 +54,7 @@
               <tr>
                 <td colspan="2" style="color:#D8DEE9; font-size:12px;">
                   <!-- LANG_REVIEWTASK_START -->
-                  Loading...
+                  <span style="color:#88C0D0">Go 89%</span> · <span style="color:#B48EAD">Shell 9%</span> · <span style="color:#4C566A">PowerShell 2%</span> · <span style="color:#4C566A">Makefile 0%</span>
                   <!-- LANG_REVIEWTASK_END -->
                 </td>
               </tr>
@@ -83,7 +83,7 @@
         <tr>
           <td align="center">
             <!-- CONTACT_START -->
-            Loading...
+            <a href="https://x.com/biwakonbu"><img src="https://img.shields.io/badge/X-%40biwakonbu-2E3440?style=flat-square&logo=x&logoColor=88C0D0&labelColor=3B4252" /></a>
             <!-- CONTACT_END -->
           </td>
         </tr>

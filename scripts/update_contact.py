@@ -75,7 +75,7 @@ def main():
         print("Failed to fetch GitHub profile:", e, file=sys.stderr)
         return
     twitter = profile.get("twitter_username")
-    email = profile.get("email")
+    email = os.getenv("PROFILE_EMAIL") or profile.get("email")
     html = build_badges(twitter, email)
     update_readme(html)
 

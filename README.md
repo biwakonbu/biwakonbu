@@ -3,9 +3,9 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=2E3440&height=160&section=header" />
 </p>
 
-<!-- Title with Nord styling -->
+<!-- Title with styling -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=2E3440&height=120&section=header&text=🧊%20Biwakonbu's%20Nord%20Dashboard&fontSize=28&fontColor=88C0D0&desc=Full-stack%20Developer%20/%20Cloud%20Native%20/%20OSS%20Enthusiast&descSize=16&descAlignY=75&fontAlignY=35" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=2E3440&height=120&section=header&text=🧊%20Biwakonbu's%20Dashboard&fontSize=28&fontColor=88C0D0&desc=Full-stack%20Developer%20/%20Cloud%20Native%20/%20OSS%20Enthusiast&descSize=16&descAlignY=75&fontAlignY=35" />
 </p>
 
 ## 📊 GitHub Stats

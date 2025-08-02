@@ -26,15 +26,11 @@
 
 ## 📦 Featured Project
 
-<table align="center">
-  <tr>
-    <td>
-      <a href="https://github.com/biwakonbu/reviewtask">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=biwakonbu&repo=reviewtask&theme=nord&bg_color=2E3440&title_color=88C0D0&text_color=ECEFF4&icon_color=81A1C1&border_color=5E81AC" alt="reviewtask" />
-      </a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://github.com/biwakonbu/reviewtask">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=biwakonbu&repo=reviewtask&theme=nord&bg_color=2E3440&title_color=88C0D0&text_color=ECEFF4&icon_color=81A1C1&border_color=5E81AC" alt="reviewtask" />
+  </a>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/biwakonbu/reviewtask?color=%2388C0D0&label=%E2%AD%90%20Stars&labelColor=%234C566A&style=for-the-badge" />

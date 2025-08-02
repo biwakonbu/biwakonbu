@@ -56,7 +56,9 @@
 <p align="center">
   <img src="https://img.shields.io/github/v/release/biwakonbu/reviewtask?color=%2388C0D0&label=Version&labelColor=%234C566A&style=for-the-badge" />
   <img src="https://img.shields.io/github/license/biwakonbu/reviewtask?color=%23A3BE8C&label=License&labelColor=%234C566A&style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Docs-Available-%2381A1C1?style=for-the-badge&labelColor=%234C566A" />
+  <a href="https://biwakonbu.github.io/reviewtask/">
+    <img src="https://img.shields.io/badge/Docs-Available-%2381A1C1?style=for-the-badge&labelColor=%234C566A" />
+  </a>
   <img src="https://img.shields.io/github/downloads/biwakonbu/reviewtask/total?color=%23B48EAD&label=Downloads&labelColor=%234C566A&style=for-the-badge" />
 </p>
 

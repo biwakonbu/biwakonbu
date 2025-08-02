@@ -1,0 +1,42 @@
+name: Update Note Popular Posts
+
+on:
+  schedule:
+    - cron: '0 3 * * *' # every day at 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Update note posts
+        run: python scripts/update_note_posts.py
+      - name: Update repo languages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: biwakonbu
+          FEATURED_REPO: reviewtask
+        run: python scripts/update_repo_languages.py
+      - name: Update contact badges
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: biwakonbu
+        run: python scripts/update_contact.py
+      - name: Commit and push if changed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git config --global user.name 'github-actions[bot]'
+            git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+            git add README.md
+            git commit -m 'chore: update popular note posts [skip ci]'
+            git push
+          fi

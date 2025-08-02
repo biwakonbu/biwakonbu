@@ -81,7 +81,7 @@ def format_items(items):
         line = f"• <a href=\"{href}\" style=\"color:#81A1C1;\">{title}</a>{date_str}"
         lines.append(line)
     # HTML line breaks
-    return "<br/>\n            ".join(lines)
+    return "<br/>\n".join(lines)
 
 
 def update_readme(rendered_html):
@@ -90,7 +90,7 @@ def update_readme(rendered_html):
     end_marker = "<!-- NOTE_POSTS_END -->"
 
     pattern = re.compile(f"{start_marker}.*?{end_marker}", re.S)
-    replacement = f"{start_marker}\n            {rendered_html}\n            {end_marker}"
+    replacement = f"{start_marker}\n{rendered_html}\n{end_marker}"
 
     new_content, count = pattern.subn(replacement, content)
     if count == 0:

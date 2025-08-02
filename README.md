@@ -48,7 +48,7 @@
               </tr>
               <tr>
                 <td colspan="2" style="color:#D8DEE9;">
-                  コードレビューを効率化する CLI / ダッシュボードツール。GitHub PR をまとめてチェックできます。
+                  A tool for checking and analyzing PR reviews using AI
                 </td>
               </tr>
               <tr>

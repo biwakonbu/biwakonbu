@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Update README Popular Note Posts section.
 
-Fetches https://note.com/biwakonbu, extracts articles and like counts,
-selects the most liked ones, and replaces the section between
+Fetches RSS feed from https://note.com/biwakonbu/rss, extracts articles,
+selects the most recent ones, and replaces the section between
 <!-- NOTE_POSTS_START --> and <!-- NOTE_POSTS_END --> in README.md.
 """
 
@@ -10,49 +10,60 @@ import re
 import os
 import sys
 import requests
-from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
 from pathlib import Path
+from datetime import datetime
 
 USERNAME = os.getenv("NOTE_USERNAME", "biwakonbu")
-NOTE_URL = f"https://note.com/{USERNAME}"
+RSS_URL = f"https://note.com/{USERNAME}/rss"
 README_PATH = Path(__file__).resolve().parent.parent / "README.md"
 MAX_ITEMS = int(os.getenv("NOTE_MAX_ITEMS", "3"))
 
 
 def fetch_articles():
-    print("Fetching note.com page…", NOTE_URL)
-    res = requests.get(NOTE_URL, timeout=15)
+    print("Fetching RSS feed…", RSS_URL)
+    res = requests.get(RSS_URL, timeout=15)
     res.raise_for_status()
-    soup = BeautifulSoup(res.text, "html.parser")
-
-    article_links = soup.select("a[href^='https://note.com/{}/n/']".format(USERNAME))
+    
+    # Parse XML
+    root = ET.fromstring(res.content)
+    
+    # Find all items in the RSS feed
+    items = root.findall(".//item")
     results = []
-    for a in article_links:
-        href = a.get("href")
-        if not href:
+    
+    for item in items:
+        title_elem = item.find("title")
+        link_elem = item.find("link")
+        pub_date_elem = item.find("pubDate")
+        
+        if title_elem is None or link_elem is None:
             continue
-        title_tag = a.select_one("h3, h2, p")
-        if not title_tag:
-            continue
-        title = title_tag.get_text(strip=True)
-
-        # Like count may be in a span inside the link or sibling; attempt to find numeric
-        like_tag = a.select_one("span")
-        likes = 0
-        if like_tag:
-            m = re.search(r"\d+", like_tag.get_text())
-            if m:
-                likes = int(m.group())
-        results.append({"title": title, "href": href, "likes": likes})
-
-    # Deduplicate by href keeping max likes
-    dedup = {}
-    for item in results:
-        href = item["href"]
-        if href not in dedup or item["likes"] > dedup[href]["likes"]:
-            dedup[href] = item
-
-    return list(dedup.values())
+            
+        title = title_elem.text.strip() if title_elem.text else ""
+        href = link_elem.text.strip() if link_elem.text else ""
+        
+        # Parse publication date
+        pub_date = None
+        if pub_date_elem is not None and pub_date_elem.text:
+            try:
+                # RSS date format: "Mon, 02 Jan 2006 15:04:05 MST"
+                pub_date = datetime.strptime(pub_date_elem.text, "%a, %d %b %Y %H:%M:%S %Z")
+            except ValueError:
+                try:
+                    # Alternative format without timezone
+                    pub_date = datetime.strptime(pub_date_elem.text[:25], "%a, %d %b %Y %H:%M:%S")
+                except ValueError:
+                    pub_date = None
+        
+        if title and href:
+            results.append({
+                "title": title, 
+                "href": href, 
+                "pub_date": pub_date
+            })
+    
+    return results
 
 
 def format_items(items):
@@ -60,9 +71,14 @@ def format_items(items):
     for it in items:
         title = it["title"]
         href = it["href"]
-        likes = it["likes"]
-        heart = "\u2665"
-        line = f"• <a href=\"{href}\" style=\"color:#81A1C1;\">{title}</a> ({likes}{heart})"
+        pub_date = it["pub_date"]
+        
+        # Format date
+        date_str = ""
+        if pub_date:
+            date_str = f" ({pub_date.strftime('%Y-%m-%d')})"
+        
+        line = f"• <a href=\"{href}\" style=\"color:#81A1C1;\">{title}</a>{date_str}"
         lines.append(line)
     # HTML line breaks
     return "<br/>\n            ".join(lines)
@@ -92,8 +108,15 @@ def main():
     if not articles:
         print("No articles found, abort.")
         return
-    articles.sort(key=lambda x: x["likes"], reverse=True)
-    top_items = articles[:MAX_ITEMS]
+    
+    # Sort by publication date (newest first)
+    articles_with_date = [a for a in articles if a["pub_date"] is not None]
+    articles_without_date = [a for a in articles if a["pub_date"] is None]
+    
+    articles_with_date.sort(key=lambda x: x["pub_date"], reverse=True)
+    sorted_articles = articles_with_date + articles_without_date
+    
+    top_items = sorted_articles[:MAX_ITEMS]
     html = format_items(top_items)
     update_readme(html)
 

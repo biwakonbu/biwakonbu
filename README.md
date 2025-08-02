@@ -72,8 +72,10 @@
 
 ## Popular Posts on note
 <!-- NOTE_POSTS_START -->
-Loading...
-<!-- NOTE_POSTS_END -->
+            • <a href="https://note.com/biwakonbu/n/n455ffc33c2b1" style="color:#81A1C1;">AIドキュメント改竄、気づけますか？「固定」の錠で守る逆転アプローチ</a> (2025-08-02)<br/>
+            • <a href="https://note.com/biwakonbu/n/n2e4fd4a3e732" style="color:#81A1C1;">note を書くのに利用している mermaid-cli の設定</a> (2025-08-02)<br/>
+            • <a href="https://note.com/biwakonbu/n/n8a3e0e4e1cdb" style="color:#81A1C1;">壊れない Vibe Coding を支えるPR開発</a> (2025-08-01)
+            <!-- NOTE_POSTS_END -->
 
 ## Connect with me
 

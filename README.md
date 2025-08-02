@@ -12,7 +12,6 @@
 
 ## Tech Stack
 
-### Languages & Frameworks
 <p align="center">
   <img src="https://img.shields.io/badge/Go-%232E3440?style=for-the-badge&logo=go&logoColor=%2388C0D0&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Rust-%232E3440?style=for-the-badge&logo=rust&logoColor=%2381A1C1&labelColor=%233B4252" />
@@ -21,30 +20,24 @@
   <img src="https://img.shields.io/badge/Python-%232E3440?style=for-the-badge&logo=python&logoColor=%2388C0D0&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Java-%232E3440?style=for-the-badge&logo=openjdk&logoColor=%23D08770&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/C%23-%232E3440?style=for-the-badge&logo=csharp&logoColor=%23B48EAD&labelColor=%233B4252" />
+  <img src="https://img.shields.io/badge/F%23-%232E3440?style=for-the-badge&logo=fsharp&logoColor=%23B48EAD&labelColor=%233B4252" />
+  <img src="https://img.shields.io/badge/Common%20Lisp-%232E3440?style=for-the-badge&logo=lisp&logoColor=%23A3BE8C&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/React-%232E3440?style=for-the-badge&logo=react&logoColor=%2388C0D0&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Next.js-%232E3440?style=for-the-badge&logo=nextdotjs&logoColor=%23ECEFF4&labelColor=%233B4252" />
+  <img src="https://img.shields.io/badge/Nuxt.js-%232E3440?style=for-the-badge&logo=nuxtdotjs&logoColor=%23A3BE8C&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Vue.js-%232E3440?style=for-the-badge&logo=vuedotjs&logoColor=%23A3BE8C&labelColor=%233B4252" />
-</p>
-
-### Cloud & Infrastructure
-<p align="center">
   <img src="https://img.shields.io/badge/Kubernetes-%232E3440?style=for-the-badge&logo=kubernetes&logoColor=%235E81AC&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Docker-%232E3440?style=for-the-badge&logo=docker&logoColor=%2388C0D0&labelColor=%233B4252" />
-  <img src="https://img.shields.io/badge/AWS-%232E3440?style=for-the-badge&logo=amazon-aws&logoColor=%23EBCB8B&labelColor=%233B4252" />
+  <img src="https://img.shields.io/badge/AWS-%232E3440?style=for-the-badge&logo=amazonaws&logoColor=%23EBCB8B&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Google%20Cloud-%232E3440?style=for-the-badge&logo=google-cloud&logoColor=%235E81AC&labelColor=%233B4252" />
-  <img src="https://img.shields.io/badge/Microsoft%20Azure-%232E3440?style=for-the-badge&logo=microsoft-azure&logoColor=%2388C0D0&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Terraform-%232E3440?style=for-the-badge&logo=terraform&logoColor=%23B48EAD&labelColor=%233B4252" />
-  <img src="https://img.shields.io/badge/Helm-%232E3440?style=for-the-badge&logo=helm&logoColor=%235E81AC&labelColor=%233B4252" />
-</p>
-
-### Databases & Tools
-<p align="center">
   <img src="https://img.shields.io/badge/PostgreSQL-%232E3440?style=for-the-badge&logo=postgresql&logoColor=%235E81AC&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/MySQL-%232E3440?style=for-the-badge&logo=mysql&logoColor=%2388C0D0&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Redis-%232E3440?style=for-the-badge&logo=redis&logoColor=%23BF616A&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/MongoDB-%232E3440?style=for-the-badge&logo=mongodb&logoColor=%23A3BE8C&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/Git-%232E3440?style=for-the-badge&logo=git&logoColor=%23D08770&labelColor=%233B4252" />
   <img src="https://img.shields.io/badge/GitHub-%232E3440?style=for-the-badge&logo=github&logoColor=%23ECEFF4&labelColor=%233B4252" />
+  <img src="https://img.shields.io/badge/Emacs-%232E3440?style=for-the-badge&logo=gnuemacs&logoColor=%23B48EAD&labelColor=%233B4252" />
 </p>
 
 ## Featured Project
